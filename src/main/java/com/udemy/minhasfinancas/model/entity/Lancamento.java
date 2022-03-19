@@ -21,14 +21,18 @@ import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
 import com.udemy.minhasfinancas.model.enums.StatusLancamento;
 import com.udemy.minhasfinancas.model.enums.TipoLancamento;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 //o programa já identifica sozinho o 'name' pelo nome da classe, mas coloquei para ser mais didático
 @Table(name = "lancamento", schema = "financas")
 @Builder
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Lancamento {
 
 	@Id
